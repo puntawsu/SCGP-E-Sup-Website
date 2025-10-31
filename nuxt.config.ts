@@ -1,8 +1,22 @@
 export default defineNuxtConfig({
   ssr: false,
 
+  ignore: [
+    '**/*.DS_Store',
+    '**/vite/**',
+    '**/ vite/**'
+  ],
+
   vite: {
     assetsInclude: ['**/*.PNG', '**/*.JPG', '**/*.JPEG'],
+    build: {
+      rollupOptions: {
+        onwarn(warning, warn) {
+          if (warning.code === 'UNRESOLVED_IMPORT') return
+          warn(warning)
+        }
+      }
+    }
   },
 
   css: [
