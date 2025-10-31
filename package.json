@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "^8.3.1",
+    "@nuxtjs/i18n": "^8.5.6",
     "@pinia/nuxt": "^0.4.11",
     "@yeger/vue-masonry-wall": "^3.4.3",
     "bootstrap": "^5.3.3",

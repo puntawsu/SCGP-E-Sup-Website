@@ -1,6 +1,10 @@
 export default defineNuxtConfig({
   ssr: false,
 
+  vite: {
+    assetsInclude: ['**/*.PNG', '**/*.JPG', '**/*.JPEG'],
+  },
+
   css: [
     "bootstrap/scss/bootstrap.scss",
     "swiper/css/bundle",
@@ -27,7 +31,14 @@ export default defineNuxtConfig({
     defaultLocale: 'th',
     lazy: true,
     langDir: 'assets/language',
+  },
 
+  nitro: {
+    preset: 'static',
+    output: {
+      dir: 'dist',
+      publicDir: 'dist'
+    }
   },
 
   plugins: [
