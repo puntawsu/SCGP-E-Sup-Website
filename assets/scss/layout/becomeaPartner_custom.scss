@@ -1,0 +1,132 @@
+@use '../utils' as *;
+.BecomeaPartner_Page {
+  margin-top: 3rem;
+  .detail {
+    .becomeaPartner_card {
+      border: 0;
+      box-shadow: inset 0px 2px 9px #ffffffbb, 3px 4px 0.75rem #00000055;
+      border-radius: 20px;
+      .title {
+        font-weight: 700;
+        padding-top: 2rem;
+        h3 {
+          color: $primary-color-2;
+          text-align: center;
+        }
+      }
+      .from-zone {
+        padding: 3rem;
+        border-bottom: 1px solid #dbdbdb;
+        .from-zone-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: $primary-color-2;
+          margin-bottom: 1.5rem;
+        }
+        .from-group {
+          margin-bottom: 1rem;
+          .form-label {
+            color: #000;
+            margin-bottom: 0.5rem;
+          }
+          .form-check-group {
+            display: flex;
+            .form-check {
+              margin-right: 1rem;
+            }
+          }
+        }
+        @media (max-width: 768px) {
+          padding: 1rem;
+          .from-group {
+            .text-muted {
+              font-size: 0.6rem;
+              color: $text-color-2;
+              // margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+      .Submit-form {
+        width: 100%;
+        .btn {
+          transition: all 0.7s ease-in-out;
+          width: 100%;
+          padding: 0.5rem 0;
+          background: linear-gradient(
+            90deg,
+            $warning-color-2,
+            $warning-color-1,
+            $primary-color-2 50%
+          );
+          background-size: 290% auto;
+          background-position: center right;
+          color: #fff;
+          border: unset;
+        }
+        &:hover {
+          .btn {
+            background-position: center left;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .custom-file {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  .custom-file-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0;
+  }
+  .custom-file-label {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    padding: 1rem 1rem;
+    line-height: 1.5;
+    background-color: #fff;
+    border: 1px #ced4da dashed;
+    border-radius: 0.25rem;
+    color: #6e6e6e;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .custom-file-label::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
+}

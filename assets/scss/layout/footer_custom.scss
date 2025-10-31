@@ -1,0 +1,64 @@
+@use "../utils" as *;
+
+.footer-area {
+  .footer__top {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    .footer-banner {
+      max-height: 200px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      img {
+        height: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+  .footer__midden {
+    background: #eff0f0;
+    color: $primary-color-3;
+    .footer-menu {
+      padding: 10px 0;
+      display: flex;
+      justify-content: flex-end;
+      font-weight: 700;
+      .sub-menu {
+        padding: 0 10px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        &:hover {
+          color: $primary-color-1;
+        }
+      }
+      .bder {
+        border-right: 1px solid $primary-color-3;
+      }
+    }
+    @media (max-width: 768px) {
+      .footer-menu {
+        padding: 5px 0;
+        .sub-menu {
+          padding: 0 5px;
+          font-size: 8px;
+        }
+      }
+    }
+  }
+  .footer__bottom {
+    padding: 10px 0;
+    background: linear-gradient(90deg, $primary-color-dark2, $primary-color-1);
+  }
+}
+
+.test {
+  @media #{$xl} {
+    // width: 44%;
+  }
+
+  @media #{$sm} {
+    width: 30%;
+  }
+}

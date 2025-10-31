@@ -1,0 +1,145 @@
+@use "../utils" as *;
+.policyOfWaste_Page {
+  margin-top: 3rem;
+  .title {
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    h3 {
+      color: $primary-color-2;
+      text-align: center;
+    }
+  }
+  .detail {
+    .text {
+      line-height: normal;
+      font-size: 1rem;
+      color: $text-color-1;
+      span {
+        font-size: 1.25rem;
+      }
+      .sub-header {
+        color: $primary-color-2;
+      }
+      .sub-header-per {
+        font-size: 1rem;
+        color: $warning-color-2;
+        b {
+          font-size: 1.25rem;
+        }
+      }
+      .sub-text {
+        padding: 0 2rem;
+      }
+    }
+  }
+  .detail-img {
+    margin-top: 1rem;
+    width: 100%;
+    .img {
+      padding: 1rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .download-pdf {
+    margin-top: 2rem;
+    .card {
+      box-shadow: inset 0px 2px 9px #ffffffbb, 3px 4px 0.75rem #00000055;
+      overflow: hidden;
+      border: 0;
+      .card-body {
+        position: relative;
+        padding: 2rem 2rem;
+        flex-grow: 1;
+        height: 100%;
+
+        .download-pdf-btn {
+          .btn--outline-link {
+            width: fit-content;
+            position: relative;
+            padding-bottom: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #888;
+            transition: all 0.3s ease-in-out;
+            svg {
+              path {
+                stroke: #888;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+            &:before {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 0;
+              height: 2px;
+              background-color: #fff;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 45px;
+        width: 45px;
+        border-radius: 0 0 2rem 0;
+        background-image: linear-gradient(to bottom right, #e7004c, #00abc8);
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+        .download-pdf-btn {
+          .btn--outline-link {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+            svg path {
+              stroke: #fff;
+            }
+            &:before {
+              width: 100%;
+            }
+          }
+        }
+        &:before {
+          width: 100%;
+          height: 100%;
+          border-radius: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    .download-pdf {
+      .card {
+        &:before {
+          height: 2rem;
+          width: 2rem;
+        }
+        .card-body {
+          padding: 1.5rem 1.5rem;
+          .download-pdf-btn {
+            .btn--outline-link {
+              font-size: 0.75rem;
+              svg {
+                width: 0.75rem;
+                height: 0.75rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

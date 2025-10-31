@@ -1,0 +1,288 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+
+/*  44. FOOTER CSS START
+/*----------------------------------------*/
+
+.header__area {
+  .header__transparent {
+    background: #fff;
+    color: $primary-color-3 !important;
+  }
+  // .main-menu ul li a {
+  //   color: $primary-color-3;
+  //   padding: 0px 0;
+  //   margin: 14px 0;
+  //   padding: 0 15px;
+  //   font-size: 14px;
+  // }
+  // .main-menu-top ul li a {
+  //   color: $primary-color-3;
+  //   padding: 0px 0;
+  //   margin-top: 5px;
+  //   margin-bottom: 0;
+  //   padding: 0 15px;
+  //   font-size: 14px;
+  // }
+  .main-menu ul li .submenu,
+  .header__sticky.header-sticky .main-menu ul li .submenu {
+    padding: 5px 0 5px;
+    min-width: 250px;
+    li {
+      a {
+        color: $primary-color-3;
+        cursor: pointer;
+        padding: 0 20px;
+        &::before {
+          left: 15px;
+          background-color: $primary-color-3;
+        }
+      }
+      &:hover {
+        a {
+          padding-left: 30px;
+          color: $warning-color-2;
+          &::before {
+            width: 10px;
+            height: 1px;
+            background-color: $warning-color-2;
+          }
+        }
+      }
+    }
+    &.submenu-lang {
+      left: unset;
+      right: 0;
+      min-width: 100px;
+    }
+  }
+  .header__sticky {
+    position: relative;
+  }
+  .main-menu ul li a,
+  .header__sticky.header-sticky .main-menu ul li a {
+    color: $primary-color-3;
+    padding: 0px 0;
+    margin: 10px 0 14px 0;
+    padding: 0 25px;
+    font-size: 14px;
+    &:hover {
+      color: $warning-color-2;
+    }
+  }
+  .main-menu-top ul li a,
+  .header__sticky.header-sticky .main-menu-top ul li a {
+    color: $primary-color-3;
+    padding: 0px 0;
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding: 0 15px;
+    font-size: 14px;
+    &:hover {
+      color: $warning-color-2;
+    }
+  }
+  .li-menu {
+    a {
+    }
+  }
+  .main-menu ul li.has-dropdown a {
+    &::after {
+      color: $primary-color-3;
+    }
+    &:hover {
+      &::after {
+        color: $warning-color-2 !important;
+      }
+    }
+  }
+  .header__sticky.header-sticky .main-menu ul li a::after {
+    color: $primary-color-3;
+    &:hover {
+      color: $warning-color-2;
+    }
+  }
+  .main-menu ul li {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    cursor: pointer;
+  }
+  .border-r a {
+    color: #696969 !important;
+    border-right: 1px solid #69696950;
+  }
+  .main-menu ul li .submenu li a::before {
+    background-color: $primary-color-3;
+  }
+  .select-lang {
+    background-color: $hoverbg-color-1;
+  }
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 25%;
+    right: 20px;
+    z-index: 6;
+    .bar {
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(
+        200deg,
+        $warning-color-1,
+        $warning-color-2,
+        $primary-color-1,
+        $primary-color-dark2
+      );
+      transition: all 0.3s;
+      &.open {
+        background: #0083ca;
+      }
+      &.open:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
+      &.open:nth-child(2) {
+        opacity: 0;
+      }
+      &.open:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+  }
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(238, 238, 238);
+    // background: linear-gradient(
+    //   230deg,
+    //   #fff 90%,
+    //   $warning-color-1,
+    //   $warning-color-2,
+    //   $secondary-color-3,
+    //   $primary-color-1,
+    //   $primary-color-1,
+    //   $primary-color-2,
+    //   $primary-color-dark1,
+    //   $primary-color-dark2
+    // );
+    color: #0083ca;
+    padding-top: 60px;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    z-index: 5;
+    box-shadow: inset 1px 1px 13px rgba(255, 255, 255, 0.7333333333),
+      -3px 0px 12px 3px rgba(0, 0, 0, 0.3333333333);
+    &.open {
+      transform: translateX(0);
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        padding: 15px 20px;
+        border-bottom: 1.5px solid #88888899;
+        a {
+          color: #0083ca;
+          text-decoration: none;
+          display: block;
+          &:hover {
+            color: $warning-color-1;
+            // background-color: #444;
+          }
+        }
+        ul {
+          padding-left: 20px;
+          li {
+            padding: 10px 0;
+            border-bottom: unset;
+            a {
+              font-size: 0.9em;
+            }
+          }
+        }
+      }
+    }
+  }
+  .lang-mobile {
+    margin-top: 1rem;
+    justify-content: center;
+    .lang-mobile-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .select-lang-mobile {
+      color: $warning-color-2;
+      a {
+        border-bottom: solid 1px $warning-color-2;
+      }
+    }
+    a {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+}
+
+.header-subpage {
+  width: 100%;
+  position: relative;
+  height: 300px;
+  background: url("../images/bg/bg-1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .curve-zone {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 32%;
+    width: 100%;
+    z-index: 1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+  .header-subpage__content {
+    color: #fff;
+    padding: 20px 0;
+    h1 {
+      color: #fff;
+    }
+  }
+  @media (max-width: 768px) {
+    height: 150px;
+    .header-subpage__content {
+      padding: 10px 6px;
+      h1 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.test {
+  @media #{$xl} {
+    // width: 44%;
+  }
+  @media #{$lg} {
+    // width: 44%;
+  }
+  @media #{$sm} {
+    width: 30%;
+  }
+}
