@@ -20,7 +20,7 @@
           data-sal="slide-left"
           data-sal-delay="170"
           data-sal-duration="1000">
-          <img src="../assets/img/home/conflictminerals.png" alt="" />
+          <img src="~/assets/img/home/conflictminerals.png" alt="" />
         </div>
       </div>
       <div class="col-12 col-md-6 right">
@@ -42,7 +42,7 @@
           data-sal="fade"
           data-sal-delay="170"
           data-sal-duration="1000">
-          <img src="../assets/img/home/Mineral.png" alt="" />
+          <img src="~/assets/img/home/Mineral.png" alt="" />
         </div>
       </div>
     </div>

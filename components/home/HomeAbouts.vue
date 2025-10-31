@@ -23,7 +23,7 @@
         data-sal-delay="170"
         data-sal-duration="300">
         <div class="about-banner-Zone">
-          <img src="../../assets/img/home/about_img.png" alt="" />
+          <img src="~/assets/img/home/about_img.png" alt="" />
         </div>
       </div>
     </div>

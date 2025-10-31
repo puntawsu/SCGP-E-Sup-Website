@@ -5,7 +5,7 @@
         <div class="row p-0 m-0">
           <div class="col-xs-12 p-0 m-0">
             <div class="footer-banner">
-              <img src="../../assets/img/footer/footer-1.png" alt="" />
+              <img src="~/assets/img/footer/footer-1.png" alt="" />
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@
         <div class="supplierDiversity-banner-Zone">
           <div class="shadowbanner"></div>
 
-          <img src="../assets/img/home/bannerSupplierDiversity2.jpg" alt="" />
+          <img src="~/assets/img/home/bannerSupplierDiversity2.jpg" alt="" />
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@
           data-sal="fade"
           data-sal-delay="170"
           data-sal-duration="1000">
-          <img src="../../assets/img/home/HomeProcurementPolicy.png" alt="" />
+          <img src="~/assets/img/home/HomeProcurementPolicy.png" alt="" />
         </div>
       </div>
       <div class="col-12 col-md-6 right">

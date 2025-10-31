@@ -11,7 +11,7 @@
             data-sal-duration="1000">
             <div class="banner-img">
               <!-- -->
-              <img src="../../assets/img/home/Other1.png" alt="" />
+              <img src="~/assets/img/home/Other1.png" alt="" />
             </div>
             <div
               class="banner-text"
@@ -45,7 +45,7 @@
             data-sal-duration="1000">
             <div class="banner-img">
              
-              <img src="../../assets/img/home/Other2.jpg" alt="" />
+              <img src="~/assets/img/home/Other2.jpg" alt="" />
             </div>
             <div
               class="banner-text"

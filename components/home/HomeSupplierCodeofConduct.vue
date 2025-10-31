@@ -20,7 +20,7 @@
               data-sal-delay="170"
               data-sal-duration="1000"
             >
-              <img src="../../assets/img/SupplierCodeofConduct.jpg" alt="" />
+              <img src="~/assets/img/SupplierCodeofConduct.jpg" alt="" />
             </div>
           </div>
           <div class="col-12 col-lg-6">
